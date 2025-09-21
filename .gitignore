@@ -30,3 +30,4 @@ logs/
 data/credentials/*
 !data/credentials/README.txt
 *.sqlite3
+setup_github_repo.bat 
