@@ -1,0 +1,25 @@
+
+<!-- Add Project Modal -->
+<div class="modal fade" id="addProjectModal" tabindex="-1" aria-labelledby="addProjectModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addProjectModalLabel">Add New Project</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="add-project-form">
+          <div class="mb-3">
+            <label for="project-path-input" class="form-label">Project Folder Path</label>
+            <input type="text" class="form-control" id="project-path-input" placeholder="C:\Users\YourUser\path\to\project" required>
+            <div class="form-text">Please paste the full, absolute path to your project folder.</div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" id="add-project-confirm-btn" class="btn btn-primary">Add Project</button>
+      </div>
+    </div>
+  </div>
+</div>

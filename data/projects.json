@@ -1,0 +1,12 @@
+[
+    {
+        "id": "4dd94b92-10cc-4e93-9be5-1abbff508857",
+        "name": "Blogger_Autopost",
+        "path": "C:\\Apps\\Blogger_Autopost",
+        "status": "RUNNING",
+        "last_snapshot_time": "2025-09-21 17:02:41",
+        "pending_changes_count": 0,
+        "branch": "main",
+        "remotes": []
+    }
+]

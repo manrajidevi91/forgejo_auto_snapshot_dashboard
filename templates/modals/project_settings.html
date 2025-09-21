@@ -1,0 +1,61 @@
+<!-- Project Settings Modal -->
+<div class="modal fade" id="projectSettingsModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Settings for <span id="settings-project-name-title"></span></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="project-settings-form">
+            <input type="hidden" id="settings-project-id">
+            <div class="mb-3">
+                <label for="settings-project-name" class="form-label">Project Name</label>
+                <input type="text" class="form-control" id="settings-project-name">
+            </div>
+            <div class="mb-3">
+                <label for="settings-snapshot-interval" class="form-label">Snapshot Interval (seconds)</label>
+                <input type="number" class="form-control" id="settings-snapshot-interval" min="5" max="300">
+                <div class="form-text">Min: 5s, Max: 300s</div>
+            </div>
+            <div class="mb-3">
+                <label for="settings-snapshot-branch" class="form-label">Snapshot Branch</label>
+                <input type="text" class="form-control" id="settings-snapshot-branch">
+            </div>
+            <div class="mb-3">
+                <label for="settings-push-mode" class="form-label">Push Mode</label>
+                <select class="form-select" id="settings-push-mode">
+                    <option value="no_push">No Push (Local Snapshots Only)</option>
+                    <option value="forgejo">Push to Forgejo</option>
+                </select>
+            </div>
+            <div class="mb-3" id="forgejo-username-container" style="display: none;">
+                <label for="settings-forgejo-username" class="form-label">Forgejo Username</label>
+                <input type="text" class="form-control" id="settings-forgejo-username" placeholder="Your Forgejo username">
+            </div>
+            <hr>
+            <h5>Git Remotes</h5>
+            <div id="remotes-list" class="mb-3">
+                <!-- Remotes will be dynamically added here -->
+            </div>
+            <div class="row g-2">
+                <div class="col-md">
+                    <input type="text" class="form-control" id="new-remote-name" placeholder="Remote Name (e.g., origin)">
+                </div>
+                <div class="col-md">
+                    <input type="url" class="form-control" id="new-remote-url" placeholder="Remote URL">
+                </div>
+                <div class="col-auto">
+                    <button type="button" class="btn btn-success" id="add-remote-btn">Add</button>
+                </div>
+            </div>
+            <!-- Other settings will go here -->
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="save-project-settings-btn">Save Changes</button>
+      </div>
+    </div>
+  </div>
+</div>

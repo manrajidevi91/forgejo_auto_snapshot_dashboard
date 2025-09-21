@@ -1,0 +1,17 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Help{% endblock %}
+
+{% block content %}
+    <h1>Help & Documentation</h1>
+    <h3>How Auto-Snapshot Works</h3>
+    <p>The application monitors your project folders for file changes. When changes are detected, it automatically creates a 'snapshot' by committing the changes to a local Git repository.</p>
+    
+    <h3>Key Concepts</h3>
+    <ul>
+        <li><strong>Project:</strong> Any folder on your system you choose to monitor.</li>
+        <li><strong>Snapshot:</strong> A Git commit representing the state of your project at a specific time.</li>
+        <li><strong>Forgejo Push (Optional):</strong> Snapshots can be automatically pushed to a remote repository on Forgejo.</li>
+    </ul>
+{% endblock %}

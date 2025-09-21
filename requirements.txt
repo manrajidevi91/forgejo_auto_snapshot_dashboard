@@ -1,0 +1,9 @@
+flask
+python-dotenv
+jsonschema
+requests
+keyring
+pywin32
+apscheduler
+watchdog
+GitPython==3.1.40

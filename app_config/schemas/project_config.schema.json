@@ -1,0 +1,83 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Project Configuration Schema",
+    "description": "Schema for validating individual project configurations.",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$",
+            "description": "Unique identifier for the project (UUID v4)."
+        },
+        "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "User-defined name for the project."
+        },
+        "path": {
+            "type": "string",
+            "description": "Absolute path to the project directory."
+        },
+        "status": {
+            "type": "string",
+            "enum": ["RUNNING", "PAUSED"],
+            "default": "PAUSED",
+            "description": "Current status of the project (running or paused)."
+        },
+        "last_snapshot_time": {
+            "type": ["string", "null"],
+            "format": "date-time",
+            "description": "Timestamp of the last successful snapshot."
+        },
+        "snapshot_interval_seconds": {
+            "type": "integer",
+            "minimum": 5,
+            "maximum": 300,
+            "description": "Custom snapshot interval for this project."
+        },
+        "branch": {
+            "type": "string",
+            "description": "Git branch to monitor and commit to."
+        },
+        "push_mode": {
+            "type": "string",
+            "enum": ["Forgejo only", "No push", "Dual Remote"],
+            "description": "Push mode for this project's snapshots."
+        },
+        "ignores": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "List of glob patterns to ignore for this project."
+        },
+        "remotes": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {"type": "string"},
+                    "url": {"type": "string", "format": "uri"}
+                },
+                "required": ["name", "url"]
+            },
+            "description": "List of configured Git remotes."
+        },
+        "enable_lfs": {
+            "type": "boolean",
+            "default": false,
+            "description": "Whether Git LFS is enabled for this project."
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "path",
+        "status",
+        "snapshot_interval_seconds",
+        "branch",
+        "push_mode",
+        "ignores"
+    ],
+    "additionalProperties": false
+}

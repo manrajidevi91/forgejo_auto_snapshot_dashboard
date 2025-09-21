@@ -1,0 +1,31 @@
+
+{
+  "default": {
+    "enabled": true,
+    "mode": "count",
+    "settings": {
+      "keep_last_n": 100
+    }
+  },
+  "schemes": [
+    {
+      "name": "Standard",
+      "enabled": true,
+      "mode": "timeline",
+      "settings": {
+        "hourly": 24,
+        "daily": 7,
+        "weekly": 4,
+        "monthly": 6
+      }
+    },
+    {
+      "name": "Keep Last 100",
+      "enabled": true,
+      "mode": "count",
+      "settings": {
+        "keep_last_n": 100
+      }
+    }
+  ]
+}

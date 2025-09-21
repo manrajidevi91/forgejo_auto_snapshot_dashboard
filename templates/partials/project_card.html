@@ -1,0 +1,14 @@
+<div class="project-card" data-project-id="{{ project.id }}">
+    <div class="card-header">
+        <h5 class="project-name-display">{{ project.name }}</h5>
+        <div class="card-actions">
+            <button class="btn btn-sm btn-icon edit-project-btn" title="Edit">✏️</button>
+            <button class="btn btn-sm btn-icon delete-project-btn" title="Delete">🗑️</button>
+        </div>
+    </div>
+    <div class="card-body">
+        <p><strong>Status:</strong> <span class="project-status">{{ project.status }}</span></p>
+        <p><strong>Last Snapshot:</strong> <span class="last-snapshot-time">{{ project.last_snapshot_time | default('N/A') }}</span></p>
+        <p><strong>Pending Changes:</strong> <span class="pending-changes-count">{{ project.pending_changes_count | default(0) }}</span></p>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+pip-selfcheck.json
+.idea/
+.vscode/
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# Build artifacts
+dist/
+build/
+
+# Logs
+logs/
+*.log
+
+# Local data
+.DS_Store
+data/credentials/*
+!data/credentials/README.txt
+*.sqlite3

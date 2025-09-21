@@ -1,0 +1,22 @@
+<!-- Project Actions Modal -->
+<div class="modal fade" id="projectActionsModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Actions for <span id="actions-project-name"></span></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="actions-project-id">
+        <div class="project-actions-modal d-grid gap-2">
+            <button class="btn btn-primary toggle-status-btn">Toggle Status</button>
+            <button class="btn btn-secondary open-explorer-btn">Open in Explorer</button>
+            <button class="btn btn-info git-log-btn">Git Log</button>
+            <button class="btn btn-dark open-terminal-btn">Terminal</button>
+            <button class="btn btn-warning settings-btn">⚙️ Settings</button>
+            <button class="btn btn-success history-btn">History</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
