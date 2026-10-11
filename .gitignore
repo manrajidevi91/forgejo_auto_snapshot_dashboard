@@ -72,3 +72,87 @@ cookies_*.json
 *.db3-*
 !.env.example
 !.env.*.example
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+pip-selfcheck.json
+.idea/
+.vscode/
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# Build artifacts
+dist/
+build/
+
+# Logs
+logs/
+*.log
+
+# Local data
+.DS_Store
+data/credentials/*
+!data/credentials/README.txt
+*.sqlite3
+setup_github_repo.bat 
+
+# Secrets - never commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# --- secrets (security rollout) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+**/credentials.json
+**/client_secret*.json
+**/service_account*.json
+**/creds.json
+
+
+# Private credential files (ordinary source and databases remain eligible)
+.env
+.env.*
+!.env.example
+!.env.*.example
+.ocr_key
+.fernet_key
+.encryption_key
+id_rsa
+id_ed25519
+*.p12
+*.pfx
+*.ppk
+service-account*.json
+*_credentials.json
+credentials.json
+cookies.json
+cookies_*.json
+
+# SQLite databases stay local; never publish database files or journals.
+*.sqlite
+*.sqlite3
+*.db
+*.db3
+*.sqlite-*
+*.sqlite3-*
+*.db-*
+*.db3-*
